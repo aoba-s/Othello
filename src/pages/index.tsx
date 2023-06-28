@@ -23,6 +23,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
+      {turn === 1 ? <h1>黒のターン</h1> : <h1>白のターン</h1>}
       <div className={styles.board}>
         {board.map((row, y) =>
           row.map((color, x) => (
@@ -37,7 +38,7 @@ const Home = () => {
                 className={styles.stone}
                 style={{
                   backgroundColor:
-                    color === 1 ? '#000000' : color === 2 ? '#FFFFFF' : 'transparent',
+                    color === 1 ? '#252525' : color === 2 ? '#fffdfd' : 'transparent',
                 }}
               />
             </div>
